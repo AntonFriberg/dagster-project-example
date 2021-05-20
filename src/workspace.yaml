@@ -1,0 +1,5 @@
+load_from:
+  - python_file: 
+      relative_path: repositories/cereal_repositories.py
+      working_directory: .
+  
