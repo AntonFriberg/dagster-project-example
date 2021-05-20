@@ -10,6 +10,8 @@ marely my own example of a possible file structure. I personally felt that it
 was difficult to put the Dagster concepts to use since the projects own examples
 had widely different structure and was difficult to overview as a beginner.
 
+The example is based on the official [tutorial].
+
 # Getting Started
 
 To run the example simply do
@@ -48,3 +50,4 @@ python -m main
 - https://github.com/sspaeti-com/practical-data-engineering
 
 [Dagster]:(https://dagster.io/)
+[tutorial]:(https://docs.dagster.io/tutorial)
