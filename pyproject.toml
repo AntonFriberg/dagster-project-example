@@ -1,0 +1,41 @@
+[tool.black]
+line-length = 99
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
+
+[tool.isort]
+atomic = true
+line_length = 99
+indent = '    '
+multi_line_output = 3
+include_trailing_comma = true
+known_third_party = [
+  "dagster",
+  "pytest",
+]
+
+[tool.pylint.message_control]
+# wrong-import-order disabled due to conflict with isort v5
+disable="""
+    bad-continuation,
+    duplicate-code,
+    wrong-import-order
+    """
