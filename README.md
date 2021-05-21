@@ -51,5 +51,5 @@ python -m main
 - https://github.com/sephib/dagster-graph-project
 - https://github.com/sspaeti-com/practical-data-engineering
 
-[Dagster]:(https://dagster.io/)
-[tutorial]:(https://docs.dagster.io/tutorial)
+[Dagster]: https://dagster.io/
+[tutorial]:(https://docs.dagster.io/tutorial
