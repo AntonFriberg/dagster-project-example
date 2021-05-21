@@ -46,6 +46,8 @@ python -m main
       example is more advanced and utilizes sklearn.
 - https://github.com/dagster-io/dagster/tree/master/examples
     - Dagster's own examples.
+- https://github.com/xyzy-web/dagster-exchangerates
+    - An example that includes Kubernetes Deployment.
 - https://github.com/sephib/dagster-graph-project
 - https://github.com/sspaeti-com/practical-data-engineering
 
