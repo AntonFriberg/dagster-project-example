@@ -14,8 +14,4 @@ from pipelines.cereal_pipelines import complex_pipeline  # pylint: disable=unuse
 def every_weekday_9am(context):
     """Example of how to setup a weekday schedule for a pipeline."""
     date = context.scheduled_execution_time.strftime("%Y-%m-%d")
-    return {
-        "solids": {
-            "download_cereals": {"config": {"date": date}}
-        }
-    }
+    return {"solids": {"download_cereals": {"config": {"date": date}}}}
