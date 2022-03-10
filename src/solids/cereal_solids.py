@@ -19,7 +19,7 @@ def hello_cereal(context):
 
 
 @solid
-def download_cereals(_):
+def download_cereals():
     """Example of a Dagster solid that returns a list of objects."""
     response = requests.get("https://docs.dagster.io/assets/cereal.csv")
     lines = response.text.split("\n")
@@ -27,14 +27,14 @@ def download_cereals(_):
 
 
 @solid
-def find_highest_calorie_cereal(_, cereals):
+def find_highest_calorie_cereal(cereals):
     """Example of a Dagster solid that takes input and produces output."""
     sorted_cereals = list(sorted(cereals, key=lambda cereal: cereal["calories"]))
     return sorted_cereals[-1]["name"]
 
 
 @solid
-def find_highest_protein_cereal(_, cereals):
+def find_highest_protein_cereal(cereals):
     """Example of a Dagster solid that takes input and produces output."""
     sorted_cereals = list(sorted(cereals, key=lambda cereal: cereal["protein"]))
     return sorted_cereals[-1]["name"]
