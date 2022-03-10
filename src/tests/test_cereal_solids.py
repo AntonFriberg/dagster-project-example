@@ -27,23 +27,19 @@ def test_hello_cereal_solid():
 
 def test_cereal_solid_download_cereal():
     """Example of a unit-test of a simple solid."""
-    res = execute_solid(download_cereals)
-    assert res.success
-    assert len(res.output_value()) == 77
+    res = download_cereals()
+    assert type(res) == list
+    assert len(res) == 77
 
 
 def test_cereal_solid_find_highest_protein_cereal():
     """Example of a unit-test of a solid that takes both inputs and gices output."""
-    res = execute_solid(find_highest_protein_cereal, input_values={"cereals": TEST_CEREALS})
-    assert res.success
-    assert res.output_value() == "Special K"
+    assert find_highest_protein_cereal(cereals=TEST_CEREALS) == "Special K"
 
 
 def test_cereal_solid_find_highest_calorie_cereal():
     """Example of a unit-test of a solid that takes both inputs and gices output."""
-    res = execute_solid(find_highest_calorie_cereal, input_values={"cereals": TEST_CEREALS})
-    assert res.success
-    assert res.output_value() == "Special K"
+    assert find_highest_calorie_cereal(cereals=TEST_CEREALS) == "Special K"
 
 
 def test_cereal_solid_display_result():
