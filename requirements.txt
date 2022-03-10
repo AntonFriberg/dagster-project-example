@@ -1,3 +1,4 @@
-dagit==0.11.10
-dagster-postgres==0.11.10
-dagster==0.11.10
+dagit==0.12.15
+dagster-postgres==0.12.15
+dagster==0.12.15
+markupsafe==2.0.1
