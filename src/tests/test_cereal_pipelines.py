@@ -1,7 +1,7 @@
 """Example of how to unit-test Dagster pipelines."""
 from dagster import ExecuteInProcessResult
 
-from pipelines.cereal_pipelines import complex_pipeline, hello_cereal_pipeline
+from jobs.cereal_jobs import complex_pipeline, hello_cereal_pipeline
 
 
 def test_hello_cereal_pipeline():
