@@ -1,20 +1,20 @@
-"""Example of how to unit-test Dagster ops."""
+"""Example of how to unit-test Dagster jobs."""
 from dagster import ExecuteInProcessResult
 
-from jobs.cereal_jobs import complex_op, hello_cereal_op
+from jobs.cereal_jobs import complex_job, hello_cereal_job
 
 
-def test_hello_cereal_op():
-    """Example of a unit test of a simple op."""
-    result = hello_cereal_op.execute_in_process()
+def test_hello_cereal_job():
+    """Example of a unit test of a simple job."""
+    result = hello_cereal_job.execute_in_process()
     assert isinstance(result, ExecuteInProcessResult)
     assert result.success
     assert len(result.output_for_node("hello_cereal")) == 77
 
 
-def test_complex_op():
-    """Example of a unit test of a more complex op."""
-    result = complex_op.execute_in_process()
+def test_complex_job():
+    """Example of a unit test of a more complex job."""
+    result = complex_job.execute_in_process()
     assert isinstance(result, ExecuteInProcessResult)
     assert result.success
     # inspect individual ops result
