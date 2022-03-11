@@ -1,5 +1,5 @@
 """Collection of Cereal pipelines"""
-from dagster import pipeline
+from dagster import job
 
 from solids.cereal_solids import (
     display_results,
@@ -12,13 +12,13 @@ from solids.cereal_solids import (
 # pylint: disable=no-value-for-parameter
 
 
-@pipeline
+@job
 def hello_cereal_pipeline():
     """Example of a simple Dagster Pipeline."""
     hello_cereal()
 
 
-@pipeline
+@job
 def complex_pipeline():
     """Example of a more complex Dagster Pipeline."""
     cereals = download_cereals()
