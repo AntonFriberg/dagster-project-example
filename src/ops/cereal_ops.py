@@ -1,4 +1,4 @@
-"""Collection of Cereal solids"""
+"""Collection of Cereal ops"""
 import csv
 
 import requests
