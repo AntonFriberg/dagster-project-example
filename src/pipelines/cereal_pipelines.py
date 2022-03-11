@@ -1,7 +1,7 @@
 """Collection of Cereal pipelines"""
 from dagster import job
 
-from solids.cereal_solids import (
+from ops.cereal_ops import (
     display_results,
     download_cereals,
     find_highest_calorie_cereal,

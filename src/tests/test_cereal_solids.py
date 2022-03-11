@@ -1,5 +1,5 @@
 """Example of how to unit-test Dagster solids."""
-from solids.cereal_solids import (
+from ops.cereal_ops import (
     display_results,
     download_cereals,
     find_highest_calorie_cereal,
