@@ -1,4 +1,4 @@
-"""Collection of Cereal pipelines"""
+"""Collection of Cereal ops"""
 from dagster import job
 
 from ops.cereal_ops import (
@@ -9,18 +9,16 @@ from ops.cereal_ops import (
     hello_cereal,
 )
 
-# pylint: disable=no-value-for-parameter
-
 
 @job
-def hello_cereal_pipeline():
-    """Example of a simple Dagster Pipeline."""
+def hello_cereal_op():
+    """Example of a simple Dagster op."""
     hello_cereal()
 
 
 @job
-def complex_pipeline():
-    """Example of a more complex Dagster Pipeline."""
+def complex_op():
+    """Example of a more complex Dagster op."""
     cereals = download_cereals()
     display_results(
         most_calories=find_highest_calorie_cereal(cereals),
