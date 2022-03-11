@@ -1,5 +1,5 @@
-"""Example of how to run a Dagster pipeline from normal Python script."""
-from jobs.cereal_jobs import complex_pipeline
+"""Example of how to run a Dagster op from normal Python script."""
+from jobs.cereal_jobs import complex_op
 
 if __name__ == "__main__":
-    result = complex_pipeline.execute_in_process()
+    result = complex_op.execute_in_process()
