@@ -1,3 +1,4 @@
 dagit==0.14.3
 dagster-postgres==0.14.3
 dagster==0.14.3
+ipython-genutils==0.2.0
