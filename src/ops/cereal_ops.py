@@ -1,12 +1,13 @@
 """Collection of Cereal ops"""
 import csv
+from typing import List
 
 import requests
-from dagster import op, get_dagster_logger
+from dagster import Nothing, get_dagster_logger, op
 
 
 @op
-def hello_cereal():
+def hello_cereal() -> List[dict]:
     """Example of a Dagster op that retrieves data from HTTP source."""
     response = requests.get("https://docs.dagster.io/assets/cereal.csv")
     lines = response.text.split("\n")
@@ -16,7 +17,7 @@ def hello_cereal():
 
 
 @op
-def download_cereals():
+def download_cereals() -> List[dict]:
     """Example of a Dagster op that returns a list of objects."""
     response = requests.get("https://docs.dagster.io/assets/cereal.csv")
     lines = response.text.split("\n")
@@ -24,7 +25,7 @@ def download_cereals():
 
 
 @op
-def find_highest_calorie_cereal(cereals):
+def find_highest_calorie_cereal(cereals: List[dict]) -> str:
     """Example of a Dagster op that takes input and produces output."""
     sorted_by_calorie = list(sorted(cereals, key=lambda cereal: cereal["calories"]))
     get_dagster_logger().info(
@@ -34,7 +35,7 @@ def find_highest_calorie_cereal(cereals):
 
 
 @op
-def find_highest_protein_cereal(cereals):
+def find_highest_protein_cereal(cereals: List[dict]) -> str:
     """Example of a Dagster op that takes input and produces output."""
     sorted_by_protein = list(sorted(cereals, key=lambda cereal: cereal["protein"]))
     get_dagster_logger().info(
@@ -44,7 +45,7 @@ def find_highest_protein_cereal(cereals):
 
 
 @op
-def display_results(most_calories, most_protein):
+def display_results(most_calories: str, most_protein: str) -> Nothing:
     """Example of a Dagster op that takes inputs but does not produce output."""
     logger = get_dagster_logger()
     logger.info(f"Most caloric cereal: {most_calories}")
