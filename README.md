@@ -1,7 +1,7 @@
 # Dagster Project Example
 
 This is an example on how to structure a [Dagster] project in order to organize
-the jobs, repositories, schedules, and ops. The example also contains
+the assets, jobs, repositories, schedules, and ops. The example also contains
 examples on unit-tests and a docker-compose deployment file that utilizes a
 Postgresql database for the run, event_log and schedule storage.
 
