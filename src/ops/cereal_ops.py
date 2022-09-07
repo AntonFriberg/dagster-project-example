@@ -9,7 +9,7 @@ from dagster import Nothing, get_dagster_logger, op
 @op
 def hello_cereal() -> List[dict]:
     """Example of a Dagster op that retrieves data from HTTP source."""
-    response = requests.get("https://docs.dagster.io/assets/cereal.csv")
+    response = requests.get("https://docs.dagster.io/assets/cereal.csv", timeout=30)
     lines = response.text.split("\n")
     cereals = list(csv.DictReader(lines))
     get_dagster_logger().info(f"Found {len(cereals)} cereals")
@@ -19,7 +19,7 @@ def hello_cereal() -> List[dict]:
 @op
 def download_cereals() -> List[dict]:
     """Example of a Dagster op that returns a list of objects."""
-    response = requests.get("https://docs.dagster.io/assets/cereal.csv")
+    response = requests.get("https://docs.dagster.io/assets/cereal.csv", timeout=30)
     lines = response.text.split("\n")
     return list(csv.DictReader(lines))
 
