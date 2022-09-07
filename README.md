@@ -32,11 +32,17 @@ install the dependencies in an isolated Python environment.
 pip install -r requirements
 ```
 
-Then run the `main.py` script from the `src/` folder.
+Then run the `dagster_example` Python module from the project root folder.
 
 ```bash
-cd src/
-python -m main
+python -m dagster_example
+```
+
+Note that you can run the main file directly as well but then you need to add
+the project root to the PYTHONPATH environment variable manually.
+
+```bash
+PYTHONPATH="${PWD}" python dagster_example/__main__.py
 ```
 
 ## Other Examples
