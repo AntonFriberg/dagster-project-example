@@ -35,7 +35,6 @@ known_third_party = [
 [tool.pylint.message_control]
 # wrong-import-order disabled due to conflict with isort v5
 disable="""
-    bad-continuation,
     duplicate-code,
     wrong-import-order
     """
