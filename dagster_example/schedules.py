@@ -2,7 +2,7 @@
 
 from dagster import schedule
 
-from jobs import complex_job  # pylint: disable=unused-import
+from dagster_example.jobs import complex_job  # pylint: disable=unused-import
 
 
 # https://docs.dagster.io/concepts/partitions-schedules-sensors/schedules

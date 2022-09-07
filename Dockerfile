@@ -9,7 +9,7 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy source code
-COPY ./dagster.yaml .
-COPY  ./src .
+COPY ./dagster.yaml ./workspace.yaml ./
+COPY  ./dagster_example ./dagster_example
 
 CMD ["dagit", "-w", "workspace.yaml", "-h", "0.0.0.0", "-p", "3000"]
