@@ -2,7 +2,7 @@
 from dagster import repository
 
 from jobs import complex_job, hello_cereal_job
-from schedules.cereal_schedules import every_weekday_9am
+from schedules import every_weekday_9am
 
 
 @repository
