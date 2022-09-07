@@ -1,8 +1,8 @@
 """Collection of Dagster repositories"""
 from dagster import repository
 
-from jobs import complex_job, hello_cereal_job
-from schedules import every_weekday_9am
+from dagster_example.jobs import complex_job, hello_cereal_job
+from dagster_example.schedules import every_weekday_9am
 
 
 @repository
