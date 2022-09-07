@@ -1,7 +1,7 @@
 """Collection of Cereal jobs"""
 from dagster import job
 
-from ops.cereal_ops import (
+from ops.cereal import (
     display_results,
     download_cereals,
     find_highest_calorie_cereal,
