@@ -5,13 +5,15 @@ from typing import List
 import requests
 from dagster import asset, get_dagster_logger
 
+from dagster_example.ops.cereal import CEREAL_URL
+
 # pylint: disable=redefined-outer-name
 
 
 @asset
 def cereals() -> List[dict]:
     """Example of a Dagster asset represents a list of cereal dicts."""
-    response = requests.get("https://docs.dagster.io/assets/cereal.csv", timeout=30)
+    response = requests.get(CEREAL_URL, timeout=30)
     lines = response.text.split("\n")
     cereal_list = list(csv.DictReader(lines))
     get_dagster_logger().info(f"Found {len(cereal_list)} cereals")
