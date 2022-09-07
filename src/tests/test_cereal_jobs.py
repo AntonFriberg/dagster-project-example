@@ -1,7 +1,7 @@
 """Example of how to unit-test Dagster jobs."""
 from dagster import ExecuteInProcessResult
 
-from jobs.cereal_jobs import complex_job, hello_cereal_job
+from jobs import complex_job, hello_cereal_job
 
 
 def test_hello_cereal_job():

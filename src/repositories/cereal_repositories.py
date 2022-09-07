@@ -1,7 +1,7 @@
 """Collection of Cereal repositories"""
 from dagster import repository
 
-from jobs.cereal_jobs import complex_job, hello_cereal_job
+from jobs import complex_job, hello_cereal_job
 from schedules.cereal_schedules import every_weekday_9am
 
 
