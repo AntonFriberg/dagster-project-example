@@ -7,8 +7,6 @@ from dagster import asset, get_dagster_logger
 
 from dagster_example.ops.cereal import CEREAL_URL
 
-# pylint: disable=redefined-outer-name
-
 
 @asset
 def cereals() -> List[dict]:
