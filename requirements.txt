@@ -1,3 +1,4 @@
 dagit==1.1.11
 dagster-postgres==0.17.11
 dagster==1.1.11
+sqlalchemy<2.0.0
