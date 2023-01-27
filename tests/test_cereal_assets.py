@@ -1,7 +1,5 @@
 """Example of how to unit-test Dagster assets."""
 
-from pathlib import Path
-
 from dagster_example.assets.cereal import (
     CEREAL_URL,
     cereals,
@@ -9,7 +7,7 @@ from dagster_example.assets.cereal import (
     highest_protein_cereal,
 )
 
-MOCKED_CEREAL_FILE = Path(__file__).parent / "misc/cereals.csv"
+from . import MOCKED_CEREAL_FILE, MOCKED_CEREAL_LEN
 
 TEST_CEREALS = [
     {"name": "All-Bran", "calories": 70, "protein": 4},
@@ -29,7 +27,7 @@ def test_cereals_asset():
     """Example of a unit-test of an asset."""
     res = cereals()
     assert isinstance(res, list)
-    assert len(res) == 77
+    assert len(res) == MOCKED_CEREAL_LEN
 
 
 def test_cereals_asset_mocked(requests_mock):
@@ -38,7 +36,7 @@ def test_cereals_asset_mocked(requests_mock):
     requests_mock.get(CEREAL_URL, text=dummy_cereal_text)
     res = cereals()
     assert isinstance(res, list)
-    assert len(res) == 77
+    assert len(res) == MOCKED_CEREAL_LEN
 
 
 def test_cereal_op_find_highest_protein_cereal():

@@ -7,6 +7,8 @@ from dagster_example.ops.cereal import (
     hello_cereal,
 )
 
+from . import MOCKED_CEREAL_LEN
+
 TEST_CEREALS = [
     {"name": "All-Bran", "calories": 70, "protein": 4},
     {"name": "Corn Flakes", "calories": 100, "protein": 2},
@@ -18,14 +20,14 @@ def test_hello_cereal_op():
     """Example of a unit-test of a simple op."""
     res = hello_cereal()
     assert isinstance(res, list)
-    assert len(res) == 77
+    assert len(res) == MOCKED_CEREAL_LEN
 
 
 def test_cereal_op_download_cereal():
     """Example of a unit-test of a simple op."""
     res = download_cereals()
     assert isinstance(res, list)
-    assert len(res) == 77
+    assert len(res) == MOCKED_CEREAL_LEN
 
 
 def test_cereal_op_find_highest_protein_cereal():
