@@ -1,4 +1,2 @@
 load_from:
-  - python_package: dagster_example.repositories
-
-  
+  - python_module: dagster_example

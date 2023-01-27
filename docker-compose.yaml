@@ -1,10 +1,14 @@
 services:
   dagster-dagit:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     ports:
       - 3000:3000
   dagster-daemon:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     command: "dagster-daemon run"
   dagster-postgres:
     image: postgres:13.3

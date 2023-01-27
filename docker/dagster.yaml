@@ -35,3 +35,5 @@ run_coordinator:
     max_concurrent_runs: 5
 telemetry:
   enabled: false
+nux:
+  enabled: false
