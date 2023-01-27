@@ -25,24 +25,27 @@ dashboard is then available on http://localhost:3000
 
 ## Running outside Docker
 
-There is an example on how to run a single pipeline in `src/main.py`. First
-install the dependencies in an isolated Python environment.
+There is an example on how to deploy and use the dagster setup locally and how
+to run a single pipeline, that is defined in `dagster_example/__main__.py`.
+
+First install the dependencies in an isolated Python environment.
 
 ```bash
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
-Then run the `dagster_example` Python module from the project root folder.
+Then to run dagster in development mode with full UI support. This exposes
+the UI on http://localhost:3000 by default.
+
+```bash
+dagster dev
+```
+
+Note that you can run the main file directly as well since `__main__.py` will be
+the entrypoint if you run the `dagster_example` module.
 
 ```bash
 python -m dagster_example
-```
-
-Note that you can run the main file directly as well but then you need to add
-the project root to the PYTHONPATH environment variable manually.
-
-```bash
-PYTHONPATH="${PWD}" python dagster_example/__main__.py
 ```
 
 ## Other Examples
