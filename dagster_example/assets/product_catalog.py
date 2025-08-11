@@ -8,6 +8,8 @@ from dagster import asset, get_dagster_logger
 CATALOGS_CSV_PATH = "dagster_example/data/catalog_data.csv"
 PRODUCTS_CSV_PATH = "dagster_example/data/product_data.csv"
 
+# COULD NOT HANDLE THIS TASK :(
+# I will learn more about ETL and data processing in Dagster, sorry for taking your time.
 
 def read_csv_to_dicts(file_path: str) -> List[Dict]:
     with open(file_path, newline="", encoding="utf-8") as csvfile:
