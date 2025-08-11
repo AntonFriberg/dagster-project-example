@@ -1,3 +1,16 @@
+[project]
+name = "shop_inventory_etl"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "dagster",
+    "dagster-postgres",
+    "dagster-webserver",
+    "pandas",
+    "pytz",
+]
+
 [tool.dagster]
 module_name = "dagster_example"
 

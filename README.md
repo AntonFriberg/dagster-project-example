@@ -47,23 +47,3 @@ the entrypoint if you run the `dagster_example` module.
 ```bash
 python -m dagster_example
 ```
-
-## Other Examples
-
-- [pybokeh/dagster-sklearn]
-  - Gave me the inspiration for the primary folder structure. Although that
-    example is more advanced and utilizes sklearn.
-- [dagster-io/dagster examples]
-  - Dagster's own examples.
-- [xyzy-web/dagster-exchangerates]
-  - An example that includes Kubernetes Deployment.
-- [sephib/dagster-graph-project]
-- [sspaeti-com/practical-data-engineering]
-
-[Dagster]: https://dagster.io/
-[tutorial]:https://docs.dagster.io/tutorial
-[pybokeh/dagster-sklearn]: https://github.com/pybokeh/dagster-sklearn
-[dagster-io/dagster examples]: https://github.com/dagster-io/dagster
-[xyzy-web/dagster-exchangerates]: https://github.com/xyzy-web/dagster-exchangerates
-[sephib/dagster-graph-project]: https://github.com/sephib/dagster-graph-project
-[sspaeti-com/practical-data-engineering]: https://github.com/sspaeti-com/practical-data-engineering
