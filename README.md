@@ -5,30 +5,7 @@ the assets, jobs, repositories, schedules, and ops. The example also contains
 examples on unit-tests and a docker-compose deployment file that utilizes a
 Postgresql database for the run, event_log and schedule storage.
 
-This example should in no way be considered suitable for production and is
-marely my own example of a possible file structure. I personally felt that it
-was difficult to put the Dagster concepts to use since the projects own examples
-had widely different structure and was difficult to overview as a beginner.
-
-The example is based on the official [tutorial].
-
 ## Getting Started
-
-To run the example simply do
-
-```bash
-docker-compose up -d
-```
-
-This will build the Docker image and pull Postgresql dependency. The dagster
-dashboard is then available on http://localhost:3000
-
-## Running outside Docker
-
-There is an example on how to deploy and use the dagster setup locally and how
-to run a single pipeline, that is defined in `dagster_example/__main__.py`.
-
-First install the dependencies in an isolated Python environment.
 
 ```bash
 pip install -r requirements.txt
