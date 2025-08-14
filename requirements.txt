@@ -1,3 +1,0 @@
-dagster-postgres==0.25.0
-dagster==1.9.0
-dagster-webserver==1.9.0

@@ -4,11 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
-    "dagster",
-    "dagster-postgres",
-    "dagster-webserver",
     "pandas",
-    "pytz",
+    "streamlit>=1.48.1",
 ]
 
 [tool.dagster]
@@ -39,5 +36,5 @@ exclude = [
   "node_modules",
   "venv",
 ]
-# Assume Python 3.12.
-target-version = "py312"
+# Assume Python 3.13.
+target-version = "py313"
